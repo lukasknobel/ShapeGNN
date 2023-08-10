@@ -1,0 +1,35 @@
+# ShapeGNN
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs
+
+# Ablations, Table 2 in the paper
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --hidden_dim=310
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --graph_of_graphs
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --no_size
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --use_slic --graph_of_graphs
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --use_slic
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --superpixel_rotation_information
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --ign_position --graph_of_graphs --ign_position --conv_layer_type=egnn --enc_conv_layer_type=egnn
+
+# Ablation using dynamic graph construction, Table 1 in the Supplementary Material
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --conv_layer_type=dynamicedgeconv
+
+# Ablation without position encoding, Table 2 in the Supplementary Material
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --ign_position
+
+# Residual connection ablations, Table 3 in the Supplementary Material
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --enc_residual_type=no --residual_type=no
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --enc_residual_type=cat --residual_type=cat
+
+# Pooling ablations, Table 4 in the Supplementary Material
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --pool=mean
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --pool=max
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --pool=add
+
+# Capacity ablations, Table 5 in the Supplementary Material
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --hidden_dim=150
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --hidden_dim=450 --num_res_blocks=2 --num_linear_layers_mult=2
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --enc_linear_layers_mult=1 --enc_num_res_blocks=1 --enc_hidden_dim=32
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --enc_linear_layers_mult=3 --enc_num_res_blocks=3 --enc_hidden_dim=128
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --latent_dim=1
+--dataset=cifar10 --num_workers=0 --disable_val --norm_centroids --normalise_shapes --use_stddev --graph_of_graphs --latent_dim=10

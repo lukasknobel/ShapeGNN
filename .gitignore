@@ -1,0 +1,8 @@
+__pycache__
+**/.ipynb_checkpoints
+**/data
+**/runs
+*.pkl
+*.out
+**/build
+**/cmake_segment

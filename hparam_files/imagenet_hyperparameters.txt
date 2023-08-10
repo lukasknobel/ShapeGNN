@@ -1,0 +1,4 @@
+# ShapeGNN and two ablations, Table 3 in the paper
+--dataset=imagenet --num_workers=2 --batch_size=480 --epochs=100 --disable_val --norm_centroids --normalise_shapes --use_stddev --scale_params_to_img --scale_only_min_size --scale 300 --min_size 0.12 --approx_epsilon 0.07 --graph_of_graphs
+--dataset=imagenet --num_workers=2 --batch_size=640 --epochs=100 --disable_val --norm_centroids --normalise_shapes --use_stddev --scale_params_to_img --scale_only_min_size --scale 300 --min_size 0.12 --approx_epsilon 0.07
+--dataset=imagenet --num_workers=2 --batch_size=320 --epochs=100 --disable_val --norm_centroids --normalise_shapes --use_stddev --scale_params_to_img --scale_only_min_size --scale 300 --min_size 0.12 --approx_epsilon 0.07 --graph_of_graphs --num_res_blocks=2

@@ -1,0 +1,20 @@
+name: gnn_img_cls_gpu
+channels:
+  - pytorch
+  - pyg
+  - conda-forge
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.9.7
+  - pip
+  - scipy
+  - xtensor
+  - psutil
+  - pytorch
+  - torchvision
+  - pytorch-cuda=11.6
+  - pyg
+  - pip:
+    - tensorboard
+    - tqdm
